@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/Xander/Dev/TestProject/build",
+  "command": "/usr/bin/clang++  -Wall -Werror -std=c++20 -g -o CMakeFiles/TestProject.dir/src/main.cpp.o -c /home/Xander/Dev/TestProject/src/main.cpp",
+  "file": "/home/Xander/Dev/TestProject/src/main.cpp",
+  "output": "CMakeFiles/TestProject.dir/src/main.cpp.o"
+}
+]
