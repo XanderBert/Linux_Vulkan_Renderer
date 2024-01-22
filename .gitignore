@@ -14,6 +14,11 @@ _deps
 ### CMake Patch ###
 # External projects
 *-prefix/
+build/*
+build/
+*.ninja*
+
+
 
 ### Rider ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -505,7 +510,23 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-### VisualStudio Patch ###
-# Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,cmake,visualstudio,rider
+
+build/compile_commands.json
+build/CMakeCache.txt
+build/cmake_install.cmake
+build/.ninja_log
+build/build.ninja
+build/*
+build/.ninja_deps
+build/.ninja_log
+build/build.ninja
+build/cmake_install.cmake
+build/CMakeCache.txt
+build/compile_commands.json
+build/CMakeFiles/CMakeConfigureLog.yaml
+build/CMakeFiles/rules.ninja
+build/CMakeFiles/TargetDirectories.txt
+build/CMakeFiles/CMakeConfigureLog.yaml
+build/CMakeFiles/rules.ninja
+build/CMakeFiles/TargetDirectories.txt

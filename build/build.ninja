@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: TestProject
+# Project: VulkanProject
 # Configurations: Debug
 # =============================================================================
 
@@ -41,36 +41,44 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/Xander/Dev/TestProject/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target TestProject
+# Object build statements for EXECUTABLE target VulkanProject
 
 
 #############################################
-# Order-only phony target for TestProject
+# Order-only phony target for VulkanProject
 
-build cmake_object_order_depends_target_TestProject: phony || CMakeFiles/TestProject.dir
+build cmake_object_order_depends_target_VulkanProject: phony || CMakeFiles/VulkanProject.dir
 
-build CMakeFiles/TestProject.dir/src/main.cpp.o: CXX_COMPILER__TestProject_unscanned_Debug /home/Xander/Dev/TestProject/src/main.cpp || cmake_object_order_depends_target_TestProject
-  DEP_FILE = CMakeFiles/TestProject.dir/src/main.cpp.o.d
+build CMakeFiles/VulkanProject.dir/src/main.cpp.o: CXX_COMPILER__VulkanProject_unscanned_Debug /home/Xander/Dev/TestProject/src/main.cpp || cmake_object_order_depends_target_VulkanProject
+  DEP_FILE = CMakeFiles/VulkanProject.dir/src/main.cpp.o.d
   FLAGS = -Wall -Werror -std=c++20 -g
-  OBJECT_DIR = CMakeFiles/TestProject.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestProject.dir/src
+  INCLUDES = -I/home/Xander/Dev/TestProject/src
+  OBJECT_DIR = CMakeFiles/VulkanProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/VulkanProject.dir/src
+
+build CMakeFiles/VulkanProject.dir/src/VulkanSetup.cpp.o: CXX_COMPILER__VulkanProject_unscanned_Debug /home/Xander/Dev/TestProject/src/VulkanSetup.cpp || cmake_object_order_depends_target_VulkanProject
+  DEP_FILE = CMakeFiles/VulkanProject.dir/src/VulkanSetup.cpp.o.d
+  FLAGS = -Wall -Werror -std=c++20 -g
+  INCLUDES = -I/home/Xander/Dev/TestProject/src
+  OBJECT_DIR = CMakeFiles/VulkanProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/VulkanProject.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target TestProject
+# Link build statements for EXECUTABLE target VulkanProject
 
 
 #############################################
-# Link the executable TestProject
+# Link the executable VulkanProject
 
-build TestProject: CXX_EXECUTABLE_LINKER__TestProject_Debug CMakeFiles/TestProject.dir/src/main.cpp.o | /usr/lib/libglfw.so.3.3 /lib/libvulkan.so /usr/lib/libGLX.so /usr/lib/libOpenGL.so
+build VulkanProject: CXX_EXECUTABLE_LINKER__VulkanProject_Debug CMakeFiles/VulkanProject.dir/src/main.cpp.o CMakeFiles/VulkanProject.dir/src/VulkanSetup.cpp.o | /usr/lib/libglfw.so.3.3 /lib/libvulkan.so
   FLAGS = -Wall -Werror -std=c++20 -g
-  LINK_LIBRARIES = /usr/lib/libglfw.so.3.3  /lib/libvulkan.so  /usr/lib/libGLX.so  /usr/lib/libOpenGL.so
-  OBJECT_DIR = CMakeFiles/TestProject.dir
+  LINK_LIBRARIES = /usr/lib/libglfw.so.3.3  /lib/libvulkan.so
+  OBJECT_DIR = CMakeFiles/VulkanProject.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = TestProject
-  TARGET_PDB = TestProject.dbg
+  TARGET_FILE = VulkanProject
+  TARGET_PDB = VulkanProject.dbg
 
 
 #############################################
@@ -107,7 +115,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/Xander/Dev/TestProject/build
 
-build all: phony TestProject
+build all: phony VulkanProject
 
 # =============================================================================
 # Built-in targets
@@ -116,14 +124,14 @@ build all: phony TestProject
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/Xander/Dev/TestProject/CMakeLists.txt /usr/lib/cmake/glfw3/glfw3Config.cmake /usr/lib/cmake/glfw3/glfw3ConfigVersion.cmake /usr/lib/cmake/glfw3/glfw3Targets-noconfig.cmake /usr/lib/cmake/glfw3/glfw3Targets.cmake /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FindOpenGL.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindVulkan.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/Xander/Dev/TestProject/CMakeLists.txt /usr/lib/cmake/glfw3/glfw3Config.cmake /usr/lib/cmake/glfw3/glfw3ConfigVersion.cmake /usr/lib/cmake/glfw3/glfw3Targets-noconfig.cmake /usr/lib/cmake/glfw3/glfw3Targets.cmake /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindVulkan.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/Xander/Dev/TestProject/CMakeLists.txt /usr/lib/cmake/glfw3/glfw3Config.cmake /usr/lib/cmake/glfw3/glfw3ConfigVersion.cmake /usr/lib/cmake/glfw3/glfw3Targets-noconfig.cmake /usr/lib/cmake/glfw3/glfw3Targets.cmake /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FindOpenGL.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindVulkan.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /home/Xander/Dev/TestProject/CMakeLists.txt /usr/lib/cmake/glfw3/glfw3Config.cmake /usr/lib/cmake/glfw3/glfw3ConfigVersion.cmake /usr/lib/cmake/glfw3/glfw3Targets-noconfig.cmake /usr/lib/cmake/glfw3/glfw3Targets.cmake /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindVulkan.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -1,18 +1,22 @@
 cmake_minimum_required (VERSION 3.28)
 
-project (TestProject)
+project (VulkanProject)
 
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -std=c++20")
 set (source_dir "${PROJECT_SOURCE_DIR}/src/")
-file (GLOB source_files "${source_dir}/*.cpp")
 
-# Find GLFW
+# Find GLFW and Vulkan
 find_package(glfw3 REQUIRED)
-find_package(OpenGL REQUIRED)
 find_package(Vulkan REQUIRED)
 
+# Add the executable and include the main.cpp and additional.cpp
+add_executable(VulkanProject 
+    "${source_dir}/main.cpp"
+    "${source_dir}/VulkanSetup.cpp"
+)
 
-#option(GLFW_USE_WAYLAND "Use Wayland for window creation" ON)
+# Include the header files
+target_include_directories(VulkanProject PRIVATE "${source_dir}")
 
-add_executable (TestProject ${source_files})
-target_link_libraries(TestProject PRIVATE glfw OpenGL::GL Vulkan::Vulkan)
+# Link against GLFW and Vulkan
+target_link_libraries(VulkanProject PRIVATE glfw Vulkan::Vulkan)
